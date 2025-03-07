@@ -47,5 +47,26 @@ Selain strategi retensi, model yang dikembangkan juga dapat mendukung pengambila
       - Tidak lagi menggunakan aplikasi/platform.
       -	Tidak merespons kampanye pemasaran.
 
-8. 
+7. Metric Evaluation
+- Biaya Churn
+   - Customer Acquisition Cost (CAC) → Biaya memperoleh pelanggan baru
+   - Customer Retention Cost (CRC) → Biaya mempertahankan pelanggan lama
+     
+- Kesalahan Prediksi Churn
+  - Confusion matrix mengklasifikasikan prediksi churn menjadi:
+    - False Positive (FP) → Type 1 Error: Pelanggan tetap diprediksi churn → meningkatkan biaya retensi.
+    - False Negative (FN) → Type 2 Error: Pelanggan churn diprediksi tetap → kehilangan pelanggan & meningkatkan CAC.
+  - Type 2 Error lebih berisiko karena menyebabkan kehilangan pelanggan dan peningkatan biaya akuisisi.
 
+- Perbandingan CAC vs CRC
+  - CAC lebih tinggi: Contoh, jika perusahaan menghabiskan $90 per pelanggan untuk akuisisi.
+  - CRC lebih rendah: Contoh, hanya $40 per pelanggan untuk retensi.
+  - Strategi retensi lebih efisien dalam jangka panjang dibandingkan akuisisi pelanggan baru.
+
+- Optimasi Churn dengan F2-Score
+
+F2-Score menekankan recall, sehingga lebih efektif dalam mengidentifikasi pelanggan yang berisiko churn:
+F2=(1+22)×Precision×Recall22×Precision+Recall
+F2​=22×Precision+Recall(1+22)×Precision×Recall​
+
+➡ F2-Score membantu mengurangi churn dengan menyeimbangkan kesalahan prediksi dan mengoptimalkan strategi retensi.
