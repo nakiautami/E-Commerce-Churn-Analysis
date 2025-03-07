@@ -18,3 +18,9 @@ Daftar Isi
 8.	Conclusion
 9.	Recommendation
 
+**Business Problem Understanding**
+1.	Context
+E-Commerce atau perdagangan elektronik adalah proses pembelian dan penjualan barang atau jasa melalui media elektronik, khususnya internet. Dalam e-commerce, transaksi dilakukan secara online tanpa interaksi fisik antara penjual dan pembeli. Keberadaan platform digital mempermudah perusahaan dalam menjangkau pasar yang lebih luas dengan biaya yang lebih efisien. Namun, dengan pesatnya pertumbuhan e-commerce, persaingan semakin ketat, sehingga perusahaan menghadapi tantangan dalam meningkatkan serta mempertahankan pelanggan.
+
+
+
