@@ -80,7 +80,7 @@ Selain strategi retensi, model yang dikembangkan juga dapat mendukung pengambila
      - `PreferredPaymentMode`: Terdapat metode pembayaran seperti Debit Card, UPI, dan CC (Credit Card). 
      - `CityTier`: Istilah ini sering digunakan dalam segmentasi kota di Amerika Serikat, di mana kota dibagi menjadi Tier 1, Tier 2, dan Tier 3.
 
-  | Attribute | Data Type, Length | Description |
+| Attribute | Data Type, Length | Description |
 | --- | --- | --- |
 | CustomerID | Integer | ID unik pelanggan|
 | Churn | Integer | status apakah pelanggan churn atau tidak  |
