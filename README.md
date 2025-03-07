@@ -40,12 +40,12 @@ Selain strategi retensi, model yang dikembangkan juga dapat mendukung pengambila
 
 6. Target
 - Dalam analisis churn, target diklasifikasikan sebagai berikut:
-  •	0: Customer tidak churn → Pelanggan masih aktif menggunakan layanan atau produk dalam periode tertentu.
-  •	1: Customer churn → Pelanggan berhenti menggunakan layanan, ditandai dengan: 
-      o	Tidak ada transaksi dalam jangka waktu tertentu.
-      o	Berhenti berlangganan.
-      o	Tidak lagi menggunakan aplikasi/platform.
-      o	Tidak merespons kampanye pemasaran.
+  - 0: Customer tidak churn → Pelanggan masih aktif menggunakan layanan atau produk dalam periode tertentu.
+  - 1: Customer churn → Pelanggan berhenti menggunakan layanan, ditandai dengan: 
+      - Tidak ada transaksi dalam jangka waktu tertentu.
+      - Berhenti berlangganan.
+      - Tidak lagi menggunakan aplikasi/platform.
+      -	Tidak merespons kampanye pemasaran.
 
 8. 
 
