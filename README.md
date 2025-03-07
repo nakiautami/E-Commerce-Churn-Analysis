@@ -80,26 +80,28 @@ Selain strategi retensi, model yang dikembangkan juga dapat mendukung pengambila
      - `PreferredPaymentMode`: Terdapat metode pembayaran seperti Debit Card, UPI, dan CC (Credit Card). 
      - `CityTier`: Istilah ini sering digunakan dalam segmentasi kota di Amerika Serikat, di mana kota dibagi menjadi Tier 1, Tier 2, dan Tier 3.
 
-| Attribute | Data Type, Length | Description |
-| --- | --- | --- |
-| CustomerID | Integer | ID unik pelanggan|
-| Churn | Integer | status apakah pelanggan churn atau tidak  |
-| Tenure | Float | Durasi pelanggan dalam layanan |
-| PreferredLoginDevice | Object | perangkat yang digunakan ketika login |
-| CityTier | Integer | Tingkat kota customer|
-| WarehouseToHome | Float | Jarak antara gudang penyimpanan dan rumah pelanggan |
-| PreferredPaymentMode | Object | Metode pembayaran yang digunakan pelanggan |
-| Gender | Object | Jenis kelamin pelanggan  |
-| HourSpendOnApp | Float | lama waktu customer menggunakan aplikasi |
-| NumberOfDeviceRegistered | Integer | Jumlah perangkat yang terdaftar pada setiap customer|
-| PreferedOrderCat | Object | Kategori produk yang sering dipesan customer satu bulan terakhir |
-| SatisfactionScore | Integer | Skor kepuasan pelanggan terhadap layanan|
-| MaritalStatus | Object | Status pernikahan pelanggan|
-| NumberOfAddress | Integer | Jumlah alamat yang didaftarkan customer |
-| Complain | Integer | Apakah pelanggan mengajukan keluhan dalam satu bulan terakhir|
-| OrderAmountHikeFromlastYear | Float | Persentase peningkatan jumlah pesanan dibandingkan tahun lalu  |
-| CouponUsed | Float | Jumlah kupon/voucher yang telah digunakan customer selama satu bulan terakhir |
-| OrderCount | Float | Jumlah pesanan yang dilakukan selama satu bulan terakhir |
-| DaySinceLastOrder | Float | Jumlah hari sejak pesanan terakhir pelanggan|
-| CashbackAmount | Float | Rata-rata cashback yang diterima dalam satu bulan terakhir |
-  - 
+    Atribut Information
+
+    | Attribute | Data Type, Length | Description |
+    | --- | --- | --- |
+    | CustomerID | Integer | ID unik pelanggan|
+    | Churn | Integer | status apakah pelanggan churn atau tidak  |
+    | Tenure | Float | Durasi pelanggan dalam layanan |
+    | PreferredLoginDevice | Object | perangkat yang digunakan ketika login |
+    | CityTier | Integer | Tingkat kota customer|
+    | WarehouseToHome | Float | Jarak antara gudang penyimpanan dan rumah pelanggan |
+    | PreferredPaymentMode | Object | Metode pembayaran yang digunakan pelanggan |
+    | Gender | Object | Jenis kelamin pelanggan  |
+    | HourSpendOnApp | Float | lama waktu customer menggunakan aplikasi |
+    | NumberOfDeviceRegistered | Integer | Jumlah perangkat yang terdaftar pada setiap customer|
+    | PreferedOrderCat | Object | Kategori produk yang sering dipesan customer satu bulan terakhir |
+    | SatisfactionScore | Integer | Skor kepuasan pelanggan terhadap layanan|
+    | MaritalStatus | Object | Status pernikahan pelanggan|
+    | NumberOfAddress | Integer | Jumlah alamat yang didaftarkan customer |
+    | Complain | Integer | Apakah pelanggan mengajukan keluhan dalam satu bulan terakhir|
+    | OrderAmountHikeFromlastYear | Float | Persentase peningkatan jumlah pesanan dibandingkan tahun lalu  |
+    | CouponUsed | Float | Jumlah kupon/voucher yang telah digunakan customer selama satu bulan terakhir |
+    | OrderCount | Float | Jumlah pesanan yang dilakukan selama satu bulan terakhir |
+    | DaySinceLastOrder | Float | Jumlah hari sejak pesanan terakhir pelanggan|
+    | CashbackAmount | Float | Rata-rata cashback yang diterima dalam satu bulan terakhir |
+      - 
