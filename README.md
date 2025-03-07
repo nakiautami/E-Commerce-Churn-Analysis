@@ -4,7 +4,7 @@ Oleh:
 - Eki Nakia Utami
 - Naila Firdusi Putri Fadilah
 
-**Introduction**
+**INTRODUCTION**
 
 Project ini bertujuan untuk memprediksi churn pada ecommerce menggunakan machine learning. Di dalam project ini kita akan mencari cara cleaning terbaik, model terbaik, dan parameter terbaik agar menghasilkan prediksi yang terbaik yang didasarkan dari fitur-fitur telah disediakan dalam dataset. 
 Daftar Isi 
@@ -18,7 +18,7 @@ Daftar Isi
 8.	Conclusion
 9.	Recommendation
 
-**Business Problem Understanding**
+**BUSINESS PROBLEM UNDERSTANDING**
 1.	Context
 - E-Commerce atau perdagangan elektronik adalah proses pembelian dan penjualan barang atau jasa melalui media elektronik, khususnya internet. Dalam e-commerce, transaksi dilakukan secara online tanpa interaksi fisik antara penjual dan pembeli. Keberadaan platform digital mempermudah perusahaan dalam menjangkau pasar yang lebih luas dengan biaya yang lebih efisien. Namun, dengan pesatnya pertumbuhan e-commerce, persaingan semakin ketat, sehingga perusahaan menghadapi tantangan dalam meningkatkan serta mempertahankan pelanggan.
 
@@ -104,4 +104,21 @@ Selain strategi retensi, model yang dikembangkan juga dapat mendukung pengambila
     | OrderCount | Float | Jumlah pesanan yang dilakukan selama satu bulan terakhir |
     | DaySinceLastOrder | Float | Jumlah hari sejak pesanan terakhir pelanggan|
     | CashbackAmount | Float | Rata-rata cashback yang diterima dalam satu bulan terakhir |
-      - 
+
+  **DATA CLEANING**
+      Berikut ini hasil pada tahapan data cleaning.
+    | Feature | Missing Value | Outlier | Inkonsistensi Data|
+    | --- | --- | --- | --- |
+    |`Tenure` | Median | Drop value > 31| - |
+    | `WarehouseToHome` | Median | Drop value > 40 | - |
+    | `HourSpendOnApp` | Median | Outlier di pertahankan | - |
+    | `NumberOfDeviceRegistered` | - | Outlier di pertahankan | - |
+    | `NumberOfAddress` | - | Outlier di pertahankan | - |
+    | `OrderAmountHikeFromlastYear` | Median | Outlier di pertahankan | Mengubah nama kolom 'OrderAmountHikeFromlastYear' menjadi       `OrderAmountHikeFromLastYear `|
+    | `CouponUsed` | Median berdasarkan OrderCount | Outlier di pertahankan | - |
+    | `OrderCount` | Median berdasarkan CouponUsed | Outlier di pertahankan | - |
+    | `DaySinceLastOrder` | Median berdasarkan OrderCount | Drop value > 31 | - |
+    | `CashbackAmount` | - | Outlier di pertahankan | - |
+    | `PreferredLoginDevice` | - | - | nilai "Phone" akan disesuaikan menjadi "Mobile Phone |  
+    | `PreferredPaymentMode` | - | - | Mengubah nilai "COD" menjadi "Cash on Delivery dan nilai "CC" perlu disamakan menjadi "Credit Card  |
+    | `PreferredOrderCat` |  |  | Mengubah nama kolom 'PreferedOrderCat' menjadi `PreferredOrderCat ` |
