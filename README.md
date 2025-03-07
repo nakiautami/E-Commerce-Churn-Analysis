@@ -4,7 +4,7 @@ Oleh:
 - Eki Nakia Utami
 - Naila Firdusi Putri Fadilah
 
-Introduction 
+**Introduction**
 Project ini bertujuan untuk memprediksi churn pada ecommerce menggunakan machine learning. Di dalam project ini kita akan mencari cara cleaning terbaik, model terbaik, dan parameter terbaik agar menghasilkan prediksi yang terbaik yang didasarkan dari fitur-fitur telah disediakan dalam dataset. 
 Daftar Isi 
 1.	Business Problem Understanding
