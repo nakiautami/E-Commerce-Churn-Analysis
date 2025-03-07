@@ -62,11 +62,44 @@ Selain strategi retensi, model yang dikembangkan juga dapat mendukung pengambila
   - CAC lebih tinggi: Contoh, jika perusahaan menghabiskan $90 per pelanggan untuk akuisisi.
   - CRC lebih rendah: Contoh, hanya $40 per pelanggan untuk retensi.
   - Strategi retensi lebih efisien dalam jangka panjang dibandingkan akuisisi pelanggan baru.
--
 
 - Optimasi Churn dengan F2-Score
+  - F2-Score menekankan recall, sehingga lebih efektif dalam mengidentifikasi pelanggan yang berisiko churn.
+  - Rumus F2-Score:
+    - $$F_2= \frac{(1+2^2) \times \text{Precision} \times \text{Recall}}{2^2 \times \text{Precision} \times \text{Recall}}$$
+  - F2-Score membantu mengurangi churn dengan menyeimbangkan kesalahan prediksi dan mengoptimalkan strategi retensi.
+  - Accuracy tinggi → Model mampu memprediksi churn dan non-churn dengan baik.
 
-F2-Score menekankan recall, sehingga lebih efektif dalam mengidentifikasi pelanggan yang berisiko churn:
-Rumus F2-Score:
-$$F_2= \frac{(1+2^2) \times \text{Precision} \times \text{Recall}}{2^2 \times \text{Precision} \times \text{Recall}}$$
-➡ F2-Score membantu mengurangi churn dengan menyeimbangkan kesalahan prediksi dan mengoptimalkan strategi retensi.
+  **Data Understanding**
+  - Data Set
+    - Data Source : https://www.kaggle.com/datasets/ankitverma2010/ecommerce-customer-churn-analysis-and-prediction
+      - Dataset tidak seimbang
+      - Setiap baris data mempresentasikan informasi customer E-commerce
+   - Secara umum kita bisa melihat data:
+     - Dataset ini memiliki 5.630 baris(entri) dan 20 kolom.
+     - `PreferredPaymentMode`: Terdapat metode pembayaran seperti Debit Card, UPI, dan CC (Credit Card). 
+     - `CityTier`: Istilah ini sering digunakan dalam segmentasi kota di Amerika Serikat, di mana kota dibagi menjadi Tier 1, Tier 2, dan Tier 3.
+
+  | Attribute | Data Type, Length | Description |
+| --- | --- | --- |
+| CustomerID | Integer | ID unik pelanggan|
+| Churn | Integer | status apakah pelanggan churn atau tidak  |
+| Tenure | Float | Durasi pelanggan dalam layanan |
+| PreferredLoginDevice | Object | perangkat yang digunakan ketika login |
+| CityTier | Integer | Tingkat kota customer|
+| WarehouseToHome | Float | Jarak antara gudang penyimpanan dan rumah pelanggan |
+| PreferredPaymentMode | Object | Metode pembayaran yang digunakan pelanggan |
+| Gender | Object | Jenis kelamin pelanggan  |
+| HourSpendOnApp | Float | lama waktu customer menggunakan aplikasi |
+| NumberOfDeviceRegistered | Integer | Jumlah perangkat yang terdaftar pada setiap customer|
+| PreferedOrderCat | Object | Kategori produk yang sering dipesan customer satu bulan terakhir |
+| SatisfactionScore | Integer | Skor kepuasan pelanggan terhadap layanan|
+| MaritalStatus | Object | Status pernikahan pelanggan|
+| NumberOfAddress | Integer | Jumlah alamat yang didaftarkan customer |
+| Complain | Integer | Apakah pelanggan mengajukan keluhan dalam satu bulan terakhir|
+| OrderAmountHikeFromlastYear | Float | Persentase peningkatan jumlah pesanan dibandingkan tahun lalu  |
+| CouponUsed | Float | Jumlah kupon/voucher yang telah digunakan customer selama satu bulan terakhir |
+| OrderCount | Float | Jumlah pesanan yang dilakukan selama satu bulan terakhir |
+| DaySinceLastOrder | Float | Jumlah hari sejak pesanan terakhir pelanggan|
+| CashbackAmount | Float | Rata-rata cashback yang diterima dalam satu bulan terakhir |
+  - 
