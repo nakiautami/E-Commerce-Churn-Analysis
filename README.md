@@ -56,17 +56,17 @@ Selain strategi retensi, model yang dikembangkan juga dapat mendukung pengambila
   - Confusion matrix mengklasifikasikan prediksi churn menjadi:
     - False Positive (FP) → Type 1 Error: Pelanggan tetap diprediksi churn → meningkatkan biaya retensi.
     - False Negative (FN) → Type 2 Error: Pelanggan churn diprediksi tetap → kehilangan pelanggan & meningkatkan CAC.
-  - Type 2 Error lebih berisiko karena menyebabkan kehilangan pelanggan dan peningkatan biaya akuisisi.
+  - Dalam konteks analisis churn, **Type 2 Error lebih krusial untuk dihindari karena dampaknya yang lebih besar terhadap profitabilitas perusahaan**. Ketidakmampuan mengidentifikasi pelanggan yang berisiko churn dapat menyebabkan hilangnya pelanggan dan menignkatkan CAC. Sementara itu, meskipun **Type 1 Error juga perlu diperhatikan, efeknya cenderung lebih terkait pemborosan sumber daya tetapi tidak langsung mengurangi jumlah pelanggan**.
 
 - Perbandingan CAC vs CRC
   - CAC lebih tinggi: Contoh, jika perusahaan menghabiskan $90 per pelanggan untuk akuisisi.
   - CRC lebih rendah: Contoh, hanya $40 per pelanggan untuk retensi.
   - Strategi retensi lebih efisien dalam jangka panjang dibandingkan akuisisi pelanggan baru.
+-
 
 - Optimasi Churn dengan F2-Score
 
 F2-Score menekankan recall, sehingga lebih efektif dalam mengidentifikasi pelanggan yang berisiko churn:
-F2=(1+22)×Precision×Recall22×Precision+Recall
-F2​=22×Precision+Recall(1+22)×Precision×Recall​
-
+Rumus F2-Score:
+$$F_2= \frac{(1+2^2) \times \text{Precision} \times \text{Recall}}{2^2 \times \text{Precision} \times \text{Recall}}$$
 ➡ F2-Score membantu mengurangi churn dengan menyeimbangkan kesalahan prediksi dan mengoptimalkan strategi retensi.
