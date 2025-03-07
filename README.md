@@ -1,6 +1,8 @@
+# EpsilonGroup_JC_DS_FT_BDG_05_FinalProject
+
 # E-Commerce-Churn-Analysis
 Oleh:
--  Azhar Maulana
+- Azhar Maulana
 - Eki Nakia Utami
 - Naila Firdusi Putri Fadilah
 
@@ -122,3 +124,63 @@ Selain strategi retensi, model yang dikembangkan juga dapat mendukung pengambila
     | `PreferredLoginDevice` | - | - | nilai "Phone" akan disesuaikan menjadi "Mobile Phone |  
     | `PreferredPaymentMode` | - | - | Mengubah nilai "COD" menjadi "Cash on Delivery dan nilai "CC" perlu disamakan menjadi "Credit Card  |
     | `PreferredOrderCat` |  |  | Mengubah nama kolom 'PreferedOrderCat' menjadi `PreferredOrderCat ` |
+
+  **DATA ANALYSIS**
+  - Menganalisis faktor-faktor yang berkontribusi terhadap churn menggunakan eksplorasi data dan teknik statistik:
+    - Faktor Demografi: Status pernikahan, gender, dan tingkat kota dapat memengaruhi kebiasaan belanja pelanggan.
+    - Faktor Perilaku Pengguna: Lama penggunaan layanan (tenure), perangkat login, jumlah perangkat & alamat terdaftar, serta waktu penggunaan aplikasi.
+    - Faktor Kepuasan & Pengalaman: Skor kepuasan, jumlah keluhan, dan waktu pengiriman.
+    - Faktor Perilaku Transaksi: Jumlah pesanan, perubahan nilai transaksi, serta penggunaan kupon.
+    - Analisis RFM:
+      - Recency (R): Seberapa baru transaksi terakhir pelanggan.
+      - Frequency (F): Seberapa sering pelanggan bertransaksi.
+      - Monetary (M): Total nilai transaksi pelanggan.
+    - Identifikasi Risiko Churn: Pelanggan dengan skor RFM rendah memiliki potensi churn lebih tinggi.
+      
+  **MACHINE LEARNING**
+    - Tahapan Pembuatan Model Machine Learning
+      - Import Library: Menggunakan pandas, numpy, matplotlib, seaborn untuk eksplorasi data; sklearn, imblearn untuk preprocessing, modeling, evaluasi; statsmodels untuk analisis statistik.
+      - Membaca dan Pembersihan Data: Menghapus duplikasi (CustomerID), menangani missing values (median), dan menghapus outlier (Tenure, WarehouseToHome).
+      - Preprocessing Data: Standarisasi kategori (PreferredLoginDevice, PreferredPaymentMode), encoding kategori (OneHotEncoder), scaling numerik (RobustScaler).
+      - Seleksi dan Analisis Fitur: Uji Chi-Square, Mann-Whitney U Test, dan Korelasi Spearman untuk pemilihan fitur.
+      - Feature Engineering & Train-Test Split: RFM Analysis, pemilihan fitur, split data (80:20, stratifikasi Churn).
+      - Penanganan Imbalance Data: Oversampling (SMOTE), Undersampling (NearMiss).
+
+  - Pemilihan Model dan Evaluasi
+    - Modeling & Eksperimen: Logistic Regression, KNN, Decision Tree, SVM, Random Forest, XGBoost, dll.
+    - Hyperparameter Tuning: GridSearchCV, RandomizedSearchCV.
+    Pelatihan Model Terbaik: Model optimal dari tuning dilatih ulang.
+    - Evaluasi Model: F2-score, Classification Report, Precision-Recall Curve, Learning Curve.
+
+  - Hasil
+    - Berdasarkan hasil model benchmarking dan hyperparameter tuning, model **XGBoost Classification** menunjukkan performa yang baik dalam memprediksi *customer churn* di sebuah e-commerce, dengan nilai F2 Score sebelum tuning 0.90 dan **F2 Score seteleh tuning 0.92**.
+   Berikut adalah perbandingan biaya yang dikeluarkan perusahaan untuk menangani customer churn:  
+    - **Tanpa Prediksi Machine Learning**: $54,600  
+    - **Dengan Prediksi Machine Learning**: $40,490  
+    - Dengan menggunakan prediksi machine learning untuk mengidentifikasi pelanggan yang berisiko churn dan mengarahkan strategi retensi, perusahaan dapat menghemat sekitar **$14,110**, atau **25.8%** dibandingkan dengan tidak menggunakan prediksi sama sekali.  
+
+**KESIMPULAN DAN REKOMENDASI**
+- Hasil eksperimen model ditujukan untuk memprediksi apakah seorang *customer* akan melakukan churn atau tidak berdasarkan dari pola-pola yang ada dalam data, dengan rincian model sebagai berikut:
+
+    - Metric utama yang digunakan pada percobaan adalah **F2 Score**. Hal ini mempertimbangkan di mana kesalahan dalam memprediksi *customer tidak churn* yang **aktualnya adalah churn**, dianggap lebih merugikan dibandingkan kesalahan saat memprediksi *customer churn* yang **aktualnya tidak churn**. Sehingga recall dianggap dua kali lebih penting daripada precision.
+    
+    - Berdasarkan hasil model benchmarking dan hyperparameter tuning, model **XGBoost Classification** menunjukkan performa yang baik dalam memprediksi *customer churn* di sebuah e-commerce, dengan nilai F2 Score sebelum tuning 0.90 dan **F2 Score seteleh tuning 0.92**. 
+
+    - Berdasarkan model **XGBoost Classification**, fitur `HourspendOnApp`, `NumberOfDeviceRegistered`, `PreferredOrderCat`, dan `DaySinceLastOrder` merupakan lima fitur yang paling penting dalam memprediksi konsumen churn. 
+
+    - Berdasarkan contoh perhitungan biaya, perusahaan berpotensi mendapatkan kerugian $54,600 dari hilangnya konsumen yang churn tanpa prediksi dan biaya retensi yang tidak efektif.
+
+    - Untuk perhitungan biaya apabila perusahaan menerapkan machine learning, potensi kerugian yang dialami perusahaan sebesar $40,490 dari hilangnya konsumen yang terprediksi churn dan biaya retensi konsumen baik yang efektif maupun yang salah prediksi.
+
+    - Melalui seluruh proses yang telah dilakukan, penerapan *machine learning* dalam memprediksi kemungkinan *churn* dan mengoptimalkan biaya retensi pelanggan memungkinkan perusahaan menghemat hingga 25.8%. Dengan jumlah pelanggan e-commerce yang bisa mencapai jutaan, potensi penghematan ini dapat semakin meningkat jika karakteristik pelanggan masih sesuai dengan cakupan data yang digunakan dalam pemodelan. Hal ini memungkinkan perusahaan untuk mengalokasikan biaya retensi dan akuisisi pelanggan secara lebih efisien serta meminimalkan potensi kerugian.
+
+  **Tools**
+  Berikut ini tools yang digunakan.
+  - Python
+  - Pandas
+  - XGBoost
+  - Streamlit
+  - Pickle (untuk menyimpan dan memuat model)
+  - Tableau (untuk dashboard)
+  
+
