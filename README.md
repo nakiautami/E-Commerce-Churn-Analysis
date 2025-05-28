@@ -1,10 +1,4 @@
-# EpsilonGroup_JC_DS_FT_BDG_05_FinalProject
-
 # E-Commerce-Churn-Analysis
-Oleh:
-- Azhar Maulana
-- Eki Nakia Utami
-- Naila Firdusi Putri Fadilah
 
 **INTRODUCTION**
 
